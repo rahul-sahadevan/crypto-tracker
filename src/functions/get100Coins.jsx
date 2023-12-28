@@ -1,20 +1,20 @@
 import axios from "axios";
+import { API_URL } from "../constants";
 
-export default function getCoins(){
-    const url = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false&locale=en'
-    
-    const myCoins = axios.get(url)
-    .then((response)=>{
-        return response.data
+export const get100Coins = () => {
+  const coins = axios
+    .get(
+      `${API_URL}/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false`
+    )
+    .then((response) => {
+      if (response.status == 200) {
+        return response.data;
+      }
     })
-    .catch((error)=>{
-        console.log(error)
-    })
+    .catch((error) => {
+      console.log("ERROR>>>", error);
+    });
 
-    return myCoins
-   
-}
-
-
-
-
+  if (coins) return coins;
+  else return;
+};

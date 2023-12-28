@@ -1,15 +1,16 @@
 import axios from "axios";
+import { API_URL } from "../constants";
 
-function getCoinData (id){
-    const url = `https://api.coingecko.com/api/v3/coins/${id}`
-    const myData = axios.get(url)
-    .then((response)=>{
-        return response.data
+export const getCoinData = (id) => {
+  const coinData = axios
+    .get(`${API_URL}/${id}`)
+    .then((response) => {
+      return response.data;
     })
-    .catch((error)=>{
-        console.log(error.message)
-    })
+    .catch((error) => {
+      console.log("ERROR>>>", error);
+    });
 
-    return myData
-}
-export default getCoinData
+  if (coinData) return coinData;
+  else return;
+};
