@@ -2,6 +2,7 @@ import { MenuItem, Select } from "@mui/material";
 import { useState } from "react";
 import "./styles.css";
 
+// select component to select the no of days ------------------
 function SelectDays({ days, handleDaysChange, noText }) {
   return (
     <div className="select-days">

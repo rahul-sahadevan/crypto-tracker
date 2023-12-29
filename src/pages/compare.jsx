@@ -27,6 +27,7 @@ function ComparePage() {
     datasets: [],
   });
 
+  // function to handle the price type change-----------------
   const handlePriceTypeChange = async (e) => {
     setLoading(true);
     setPriceType(e.target.value);
@@ -36,6 +37,7 @@ function ComparePage() {
     setLoading(false);
   };
 
+  // function to handle the coin change-------------------
   const handleCoinChange = async (e, isCoin1) => {
     setLoading(true);
     if (isCoin1) {
@@ -56,6 +58,7 @@ function ComparePage() {
     setLoading(false);
   };
 
+  // function to handle the days change--------------
   const handleDaysChange = async (e) => {
     setLoading(true);
     setDays(e.target.value);
@@ -69,6 +72,7 @@ function ComparePage() {
     getData();
   }, []);
 
+  // getData function to get the corresponding coin data------------
   const getData = async () => {
     setLoading(true);
     const data = await get100Coins();

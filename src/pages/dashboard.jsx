@@ -16,6 +16,7 @@ function DashboardPage() {
   const [pageNumber, setPageNumber] = useState(1);
   const [paginatedCoins, setPaginatedCoins] = useState([]);
 
+  // function to handle the pagination ------------
   const handlePageChange = (event, value) => {
     setPageNumber(value);
     var startingIndex = (value - 1) * 10;

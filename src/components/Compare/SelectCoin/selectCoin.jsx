@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import SelectDays from "../../Coin/SelectDays/selectDays";
 import "./styles.css";
 
+// component to select the coin -------------
 function SelectCoin({
   allCoins,
   coin1,

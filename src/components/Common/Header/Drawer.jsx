@@ -4,6 +4,7 @@ import { toast } from "react-toastify";
 import Drawer from "@mui/material/Drawer";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 
+// the mobiile drawer component---------------
 export default function MobileDrawer() {
   const [flag, setFlag] = useState(false);
   const [darkMode, setDarkMode] = useState(

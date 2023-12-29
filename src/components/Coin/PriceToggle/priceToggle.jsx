@@ -3,6 +3,7 @@ import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
 import React, { useState } from "react";
 import "./styles.css";
 
+// component for the toggle price catogory --------------------
 function PriceToggle({ priceType, handlePriceTypeChange }) {
   return (
     <div className="toggle-div">

@@ -1,6 +1,8 @@
 import React from "react";
 import NorthRoundedIcon from "@mui/icons-material/NorthRounded";
 import "./styles.css";
+
+// component for the scroll top button -------------------
 function TopButton() {
   let mybutton = document.getElementById("myBtn");
 

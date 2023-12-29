@@ -15,6 +15,7 @@ function WatchlistPage() {
     getData();
   }, []);
 
+  // function to handle the watchlist --------------
   const getData = async () => {
     setLoading(true);
     const allCoins = await get100Coins();

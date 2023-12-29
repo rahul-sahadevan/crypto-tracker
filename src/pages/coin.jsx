@@ -13,6 +13,7 @@ import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from "../functions/getCoinPrices";
 import { settingChartData } from "../functions/settingChartData";
 
+// component for the coin page-------------
 function CoinPage() {
   const { id } = useParams();
   const [coin, setCoin] = useState();
@@ -28,6 +29,7 @@ function CoinPage() {
     getData();
   }, [id]);
 
+  // getData funtion to get  the coin data-------------
   const getData = async () => {
     setLoading(true);
     const data = await getCoinData(id);
@@ -41,6 +43,7 @@ function CoinPage() {
     }
   };
 
+  // function to handle the days changing--------------
   const handleDaysChange = async (event) => {
     setLoading(true);
     setDays(event.target.value);
@@ -51,6 +54,7 @@ function CoinPage() {
     }
   };
 
+  // function to handle the price type----------------
   const handlePriceTypeChange = async (event) => {
     setLoading(true);
     setPriceType(event.target.value);

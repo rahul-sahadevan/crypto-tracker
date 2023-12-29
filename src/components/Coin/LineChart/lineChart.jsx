@@ -3,6 +3,8 @@ import { Line } from "react-chartjs-2";
 import { Chart as ChartJS } from "chart.js/auto"; //Dont get rid of this
 import { convertNumbers } from "../../../functions/convertNumbers";
 
+// line chart component -----------------
+
 function LineChart({ chartData, priceType, multiAxis }) {
   const options = {
     plugins: {
