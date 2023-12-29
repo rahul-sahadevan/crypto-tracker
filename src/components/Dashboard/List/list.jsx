@@ -3,6 +3,7 @@ import "./styles.css";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import { convertNumbers } from "../../../functions/convertNumbers";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Tooltip } from "@mui/material";
 import { IconButton } from "@mui/material";
@@ -15,7 +16,7 @@ import { removeFromWatchlist } from "../../../functions/removeFromWatchlist";
 function List({ coin, delay, isWatchlistPage }) {
   const [added, setAdded] = useState(hasBeenAdded(coin.id));
   return (
-    <a href={`/coin/${coin.id}`}>
+    <Link to={`/coin/${coin.id}`}>
       <motion.tr
         style={{ display: isWatchlistPage && !added && "none" }}
         className="list-row"
@@ -128,7 +129,7 @@ function List({ coin, delay, isWatchlistPage }) {
           </IconButton>
         </td>
       </motion.tr>
-    </a>
+    </Link>
   );
 }
 

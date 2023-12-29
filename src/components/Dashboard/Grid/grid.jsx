@@ -3,6 +3,7 @@ import "./styles.css";
 import TrendingUpRoundedIcon from "@mui/icons-material/TrendingUpRounded";
 import TrendingDownRoundedIcon from "@mui/icons-material/TrendingDownRounded";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import { IconButton } from "@mui/material";
 import StarBorderRoundedIcon from "@mui/icons-material/StarBorderRounded";
 import { addToWatchlist } from "../../../functions/addToWatchlist";
@@ -14,7 +15,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
   const [added, setAdded] = useState(hasBeenAdded(coin.id));
 
   return (
-    <a href={`/coin/${coin.id}`}>
+    <Link to={`/coin/${coin.id}`}>
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -100,7 +101,7 @@ function Grid({ coin, delay, isWatchlistPage }) {
           </span>
         </p>
       </motion.div>
-    </a>
+    </Link>
   );
 }
 
